@@ -68,9 +68,9 @@ def main():
     for i in results:
         print(f'{(flag + 1) / sumlength:.2%} : {flag + 1} / {sumlength} >>> {domains[flag]}\t', i)
         if i is None:
-            noregist.append(domains[flag] + '.eu.org')
+            noregist.append(domains[flag])
         else:
-            regist.append(domains[flag] + '.eu.org' + '\t' + i)
+            regist.append(domains[flag] + '\t' + i)
         flag = flag + 1
 
     write_regist('./regist.txt', '\n'.join(regist))
